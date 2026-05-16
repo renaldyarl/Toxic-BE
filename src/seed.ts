@@ -118,7 +118,7 @@ async function seed() {
          turbidity_ntu, ec_us_cm, tds_ppm, orp_mv)
       VALUES ${sql(rows.map((r) => [
         r.device_id,
-        r.recorded_at,
+        r.recorded_at.toISOString(),
         r.ph,
         r.water_temperature,
         r.dissolved_oxygen,
